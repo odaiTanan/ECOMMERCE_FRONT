@@ -14,7 +14,7 @@ import "./css/root.css";
 import "./css/components/productCard.css";
 import "./css/components/userTitle.css";
 import "./css/auth/errorPage.css";
-import "./css/dashboard/components/TableLoading.css";
+import "./css/Dashboard/components/TableLoading.css";
 import "./css/Dashboard/components/Paginate.css";
 import "./css/Dashboard/components/title.css";
 import { Routes, Route } from "react-router-dom";

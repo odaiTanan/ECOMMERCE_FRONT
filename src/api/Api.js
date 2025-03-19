@@ -2,8 +2,8 @@
 
 //export const host = "http://0.0.0.0:8000/api/";
 //export const host = "http://192.168.1.110:8000/api/";
-export const host = "http://ecommerceback.rf.gd/api/";
-//export const host = "https://ecommerceback-production-8f70.up.railway.app/api/";
+//export const host = "http://ecommerceback.rf.gd/api/";
+export const host = "https://ecommerceback-production-8f70.up.railway.app/api/";
 //export const host = "http://127.0.0.1:8000/api/";
 export const REGISTER = "register";
 export const LOGIN = "login";
