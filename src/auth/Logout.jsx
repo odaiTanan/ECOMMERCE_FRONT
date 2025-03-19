@@ -1,6 +1,4 @@
 import React from "react";
-import Button from "../components/Button";
-import axios from "axios";
 import { host, LOGOUT } from "../api/api";
 import Cookie from "cookie-universal";
 import { useNavigate } from "react-router-dom";
