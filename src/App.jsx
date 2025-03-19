@@ -32,7 +32,7 @@ import Website from "./site/Website";
 import MainCategories from "./site/category/MainCategories";
 import Home from "./site/Home";
 import SingleProduct from "./site/product/SingleProduct";
-import ProductsByCategory from "./site/product/productsByCategory";
+import ProductsByCategory from "./site/product/ProductsByCategory";
 import Search from "./site/product/Search";
 import Success from "./site/payments/Success";
 import Cancle from "./site/payments/Cancle";
