@@ -1,0 +1,15 @@
+.f-single-skeleton {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.f-single-skeleton div {
+  display: flex;
+  justify-content: space-between;
+}
+.s-single-skeleton {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}

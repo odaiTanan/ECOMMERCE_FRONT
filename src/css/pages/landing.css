@@ -1,0 +1,60 @@
+#landing {
+  width: 100%;
+  height: calc(100vh - 137px);
+  background-color: #e6e8eb;
+  background-image: linear-gradient(to bottom, #e6e8eb 85%, white);
+  position: relative;
+}
+#landing .continer {
+  display: flex;
+  justify-content: space-between !important;
+  align-items: center;
+  height: 100%;
+}
+#landing img {
+  width: 500px;
+  height: 500px;
+}
+#landing svg {
+  position: absolute;
+  color: var(--green);
+  font-size: 20px;
+  bottom: 40px;
+  left: 50%;
+  transform: translate(0, -50%);
+  animation-name: down;
+  animation-timing-function: linear;
+  animation-duration: 0.7s;
+  animation-fill-mode: backwards;
+  animation-iteration-count: infinite;
+}
+#landingWords {
+  width: 400px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center !important;
+  align-items: flex-start;
+}
+#landingWords a {
+  padding: 15px;
+  width: 150px;
+  border-radius: 10px;
+  color: var(--g1);
+  background-color: var(--brown);
+  transition: 0.2s linear;
+  text-align: center;
+}
+#landingWords a:hover {
+  background-color: #733e24cf;
+}
+
+#message {
+  font-size: 20px;
+  line-height: 40px;
+}
+@keyframes down {
+  100% {
+    bottom: 20px;
+  }
+}

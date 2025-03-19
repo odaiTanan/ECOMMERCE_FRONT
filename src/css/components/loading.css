@@ -1,0 +1,50 @@
+#loading-con {
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.161);
+  position: absolute;
+  z-index: 99;
+}
+
+.btn-loader div {
+  width: 100%;
+  height: 100%;
+  background-color: var(--brown);
+  border-radius: 50%;
+}
+.line {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 62px;
+  background-color: var(--g1);
+  z-index: 0;
+  animation-name: rotate;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+
+  transform-origin: center;
+}
+.pageLoader {
+  border: 5px solid var(--green);
+  border-right-color: var(--g1);
+  border-left-color: var(--g1);
+  width: 40px;
+}
+#line2 {
+  rotate: 275deg;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

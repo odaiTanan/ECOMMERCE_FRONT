@@ -1,0 +1,21 @@
+.plus-minus input {
+  width: 37px;
+  height: 22px;
+  text-align: center;
+  gap: 8px;
+  border-radius: 5px;
+  border: 2px solid var(--green);
+}
+.plus-minus {
+  gap: 8px;
+}
+.plus-minus svg:first-child {
+  color: red;
+}
+.plus-minus svg:nth-child(3) {
+  color: green;
+}
+.plus-minus svg {
+  font-size: 20px;
+  cursor: pointer;
+}

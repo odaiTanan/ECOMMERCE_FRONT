@@ -1,0 +1,8 @@
+.continer.sectionTitle {
+  height: auto;
+  padding: 75px 0 0 0;
+  font-weight: bold;
+  font-size: 18px;
+  justify-content: flex-start;
+  color: var(--brown);
+}

@@ -1,0 +1,50 @@
+.dash-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+  width: 90%;
+  margin-top: 20px;
+}
+.dash-form input,
+.dash-div {
+  width: 350px;
+}
+.dash-form input:not(:placeholder-shown) + .inputLabel {
+  top: -14px;
+  left: 0;
+  color: var(--brown);
+}
+.dash-div input,
+select.form {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  height: 40px;
+  background-color: var(--g2);
+  border: 2px solid var(--green);
+  color: black;
+}
+.dash-div input:focus,
+select.form:focus {
+  box-shadow: 0 0 2px 1px #245f73c9;
+}
+select.form {
+  background-color: var(--green);
+  color: var(--g1);
+}
+
+.dash-div label {
+  color: black;
+}
+
+input[type="file"]::file-selector-button {
+  background-color: var(--brown);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 100%;
+}

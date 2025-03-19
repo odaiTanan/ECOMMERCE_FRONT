@@ -1,0 +1,5 @@
+.products-section-skeleton {
+  height: 300px !important;
+  overflow: hidden;
+  margin-bottom: 20px;
+}

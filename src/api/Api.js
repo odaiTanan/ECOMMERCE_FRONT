@@ -1,0 +1,32 @@
+/*Api Routes */
+
+//export const host = "http://0.0.0.0:8000/api/";
+//export const host = "http://192.168.1.110:8000/api/";
+export const host = "http://ecommerceback.rf.gd/api/";
+//export const host = "https://ecommerceback-production-8f70.up.railway.app/api/";
+//export const host = "http://127.0.0.1:8000/api/";
+export const REGISTER = "register";
+export const LOGIN = "login";
+export const USERS = "users";
+export const LOGOUT = "logout";
+export const GOOGLE_CALL_BACK = "auth/google/callback";
+export const USER = "user";
+export const UPDATE_USER = "user/edit/";
+export const GET_USER = "user/";
+export const DELETE_USER = "user/";
+export const ADD_USER = "user/add";
+export const ADD_CATEGORY = "category/add";
+export const CATEGORIES = "categories";
+export const DELETE_CATEGORY = "category/";
+export const UPDATE_CATEGORY = "category/edit/";
+export const GET_CATEGORY = "category/";
+export const ADD_PRODUCT = "product/add";
+export const PRODUCTS = "products";
+export const PRODUCT_EDIT = "product/edit/";
+export const PRODUCT_IMAGE = "product-img/add";
+export const DELETE_PRODUCT = "product/";
+export const DELETE_IMAGE = "product-img/";
+export const PRODUCT = "product";
+export const LATEST_SALE = "latest-sale";
+export const TOP_RATED = "top-rated";
+export const LATEST = "latest";

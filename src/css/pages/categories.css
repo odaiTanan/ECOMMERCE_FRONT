@@ -1,0 +1,68 @@
+.main-categories {
+  padding: 30px 0;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  background-color: var(--g1);
+}
+.main-categories img {
+  width: 120px;
+  height: 120px;
+  border-right: 2px solid var(--green);
+}
+.main-categories p {
+  text-align: center;
+  color: black;
+}
+.catIcon {
+  rotate: -90deg;
+  font-size: 12px;
+  position: absolute;
+  right: 20px;
+  bottom: 8px;
+  color: blue;
+}
+.cat-card:hover .catIcon {
+  animation-name: goToRight;
+  animation-timing-function: linear;
+  animation-duration: 0.7s;
+  animation-iteration-count: infinite;
+}
+.cat-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(179, 175, 175, 0.208);
+  transition: 0.2s linear;
+}
+.cat-card:hover::after {
+  opacity: 100%;
+}
+.cat-card {
+  display: grid;
+  padding-right: 4px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 120px;
+  font-size: 18px !important;
+  background-color: white;
+  grid-template-columns: 120px auto;
+  align-items: center;
+  gap: 4px;
+  border: 2px solid var(--green);
+}
+.full {
+  width: 100%;
+  background-color: var(--g1);
+}
+@keyframes goToRight {
+  100% {
+    right: 5px;
+  }
+}

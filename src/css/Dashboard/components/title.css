@@ -1,0 +1,79 @@
+.title {
+  padding: 12px 25px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  width: fit-content;
+  background-color: transparent;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--g1);
+  position: relative;
+}
+.s {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  position: relative;
+}
+.c1,
+.c2 {
+  background-color: var(--brown);
+  border-radius: 50%;
+  width: 20px;
+  position: absolute;
+  height: 20px;
+  top: 50%;
+}
+.title .c1 {
+  animation-name: torighttitle;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  z-index: -1;
+}
+.title .c2 {
+  animation-name: tolefttitle;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  z-index: -1;
+}
+.title:hover {
+  transition: linear 0.3s;
+  transition-delay: 0.25s;
+  color: white;
+  border-color: white;
+}
+.title span {
+  z-index: 9;
+}
+.c1 {
+  left: -15%;
+  transform: translate(0%, -50%);
+}
+.c2 {
+  right: -15%;
+  transform: translate(0%, -50%);
+}
+@keyframes torighttitle {
+  50% {
+    left: 0;
+  }
+  100% {
+    left: 0;
+    border-radius: 0;
+    width: 50.5%;
+    height: 100%;
+  }
+}
+@keyframes tolefttitle {
+  50% {
+    right: 0;
+  }
+  100% {
+    right: 0;
+    border-radius: 0;
+    width: 50%;
+    height: 100%;
+  }
+}

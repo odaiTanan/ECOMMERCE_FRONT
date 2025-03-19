@@ -1,0 +1,111 @@
+/*main continer in dashboard pages*/
+.main-dash {
+  position: relative;
+  width: 100%;
+  margin: 0 8px;
+}
+.imageOld {
+  height: 180px;
+}
+.selectImages {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed var(--green);
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.selectImages svg {
+  width: 75px;
+  height: 75px;
+  color: var(--brown);
+}
+.imagesView {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px;
+}
+.oldImagesView {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.imageOldCard {
+  width: 100px !important;
+  height: auto !important;
+}
+.imageCard {
+  overflow: hidden;
+  display: flex;
+  width: 153px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px !important;
+  border: 2px solid var(--brown);
+  background-color: var(--g2);
+  padding: 0 0 10px 0;
+  border-radius: 5px;
+}
+.imageCard:not(.imageOld) {
+  height: 240px;
+}
+.imageCard .removeMark {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--brown);
+  padding: 3px;
+}
+.imageCard .removeMark svg {
+  border-radius: 3px;
+  width: 16px;
+  background-color: white;
+  color: red;
+  cursor: pointer;
+}
+.imageCard h1 {
+  font-size: 17px;
+  color: var(--green);
+}
+.imageCard p {
+  font-size: 15px;
+  color: gray;
+}
+.imgCard {
+  width: 140px;
+  height: 140px;
+}
+.imageCard img,
+.imageOldCard img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.imageCard .desc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 140px;
+  font-size: 15px;
+  gap: 5px;
+}
+.progressBarCon {
+  width: 100%;
+  height: 7px;
+  background-color: var(--g1);
+  border-radius: 5px;
+}
+.progressBar {
+  height: 100%;
+  border-radius: 5px;
+  position: relative;
+  display: block;
+  background-color: var(--green);
+  width: 0;
+  transition: 0.2s linear;
+}

@@ -1,0 +1,116 @@
+header .continer {
+  height: auto;
+  padding: 10px 3px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+header {
+  background-color: white;
+}
+.continer.categories {
+  height: auto;
+  position: relative;
+  background-color: white;
+}
+.continer.categories div {
+  display: flex;
+}
+#login {
+  border-radius: 5px;
+  width: 75px;
+  height: 40px;
+  background-color: var(--brown);
+  color: var(--g1);
+  transition: 0.2s linear;
+}
+#login:hover {
+  scale: 1.02;
+}
+.continer.categories div a {
+  height: 60px;
+  text-align: center;
+  width: 90px;
+  padding: 0 2px;
+  color: black;
+  overflow: hidden;
+  position: relative;
+}
+.continer.categories div a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  background-color: var(--green);
+  height: 3px;
+  width: 100%;
+  transition: 0.2s linear;
+}
+.continer.categories div a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -100%;
+  background-color: var(--brown);
+  height: 3px;
+  width: 100%;
+  transition: 0.3s linear;
+}
+.continer.categories div a:hover {
+  background-color: var(--g1);
+}
+.continer.categories div a:hover::after {
+  left: 0;
+}
+.continer.categories div a:hover::before {
+  right: 0;
+}
+header img {
+  width: 150px;
+}
+.endHeader {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.endHeader svg {
+  font-size: 20px;
+  color: var(--brown);
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+.endHeader svg:hover {
+  scale: 1.05;
+}
+input.searchInput {
+  width: 100%;
+  padding: 10px;
+  border-radius: 50px;
+  border: 2px solid var(--brown);
+  outline: none;
+  background-color: var(--g1);
+  padding-right: 50px;
+}
+.searchBox {
+  position: relative;
+  cursor: pointer;
+  width: 250px;
+}
+#searchIcon:hover {
+  background-color: #124353;
+}
+#searchIcon {
+  transition-timing-function: ease-out;
+  transition-duration: 0.2s;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 40px;
+  background-color: var(--green);
+  color: var(--g1);
+  border: 1px solid var(--brown);
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}

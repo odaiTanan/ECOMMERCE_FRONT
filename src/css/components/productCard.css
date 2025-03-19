@@ -1,0 +1,87 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 355px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0px 1px 3px 2px #00000026;
+  background-image: linear-gradient(to right, var(--g1) 50%, var(--green) 50%);
+}
+
+.bottomSec {
+  display: flex;
+  padding: 20px;
+  border-top-right-radius: 20px;
+  height: 100%;
+  width: 100%;
+  background-color: var(--g1);
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.bottomSec .cartIcon {
+  color: var(--brown);
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.2s linear;
+}
+.bottomSec .cartIcon:hover {
+  scale: 1.03;
+}
+.stars {
+  color: var(--g2);
+}
+.stars .solid {
+  color: gold;
+}
+.priceSaleDiv div {
+  display: flex;
+  gap: 10px;
+}
+.discount {
+  text-decoration: line-through;
+}
+.product-card div div a {
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+}
+.priceSaleDiv {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  width: 100%;
+}
+.disc {
+  height: 40px;
+  color: gray;
+  display: flex;
+  align-items: center;
+}
+.product-card .first {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 20px;
+  overflow: hidden;
+}
+.product-card div:nth-child(2) .stars {
+  font-size: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2px;
+}
+.product-card img {
+  width: 160px;
+  height: 160px;
+}
+.cardPhoto {
+  padding: 20px 0;
+  width: 100%;
+  border-bottom-left-radius: 30px;
+  background-color: var(--green);
+}
