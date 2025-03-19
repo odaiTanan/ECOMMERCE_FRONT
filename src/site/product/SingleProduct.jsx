@@ -6,7 +6,7 @@ import React, { useContext } from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { PRODUCT } from "../../api/api";
+import { host, PRODUCT } from "../../api/api";
 import { Axios } from "../../api/Axios";
 import calcStars from "../../helpers/CalcSatrs";
 import Skeleton from "react-loading-skeleton";
@@ -34,8 +34,8 @@ const SingleProduct = () => {
 
   const showImages = images.map((img) => {
     return {
-      original: img.image,
-      thumbnail: img.image,
+      original: host.slice(0, -5) + img.image,
+      thumbnail: host.slice(0, -5) + img.image,
       originalHeight: "200px",
       originalWidth: "200px",
     };
