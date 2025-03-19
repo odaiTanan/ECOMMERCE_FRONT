@@ -1,5 +1,5 @@
 import axios from "axios";
-import { host } from "./Api";
+import { host } from "./api";
 import Cookie from "cookie-universal";
 const cookie = Cookie();
 const token = cookie.get("token");
