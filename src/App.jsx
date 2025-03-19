@@ -39,7 +39,7 @@ import Cancle from "./site/payments/Cancle";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 //dashboard lazy loading to improve user experiance
-const Dashboard = React.lazy(() => import("./Dashboard/pages/dashboard"));
+const Dashboard = React.lazy(() => import("./Dashboard/pages/Dashboard"));
 const Users = React.lazy(() => import("./Dashboard/pages/users/Users"));
 const UpdateUser = React.lazy(() =>
   import("./Dashboard/pages/users/UpdateUser")
