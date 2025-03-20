@@ -48,7 +48,7 @@ const Header = ({ user, setOpen, setActiveCart }) => {
           </span>
         </div>
         <div className="endHeader">
-          <span className="center">{CartContext["cart"]?.length}</span>
+          <span className="center count">{CartContext["cart"]?.length}</span>
           <FontAwesomeIcon
             icon={faCartShopping}
             onClick={() => setActiveCart((prev) => !prev)}

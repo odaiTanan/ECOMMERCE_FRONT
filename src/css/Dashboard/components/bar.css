@@ -89,7 +89,7 @@ select:focus {
 .endHeader {
   position: relative;
 }
-.endHeader span {
+.endHeader span.count {
   width: 16px;
   height: 16px;
   font-size: 12px;
