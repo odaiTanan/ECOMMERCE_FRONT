@@ -9,10 +9,11 @@ import UserTitle from "./UserTitle";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { searchContext } from "../context/SearchContext";
+import { cartContext } from "../context/CartContext";
 
 const Header = ({ user, setOpen, setActiveCart }) => {
   const SearchContext = useContext(searchContext);
-
+  const CartContext = useContext(cartContext);
   return (
     <header>
       <div className="continer">
@@ -47,10 +48,12 @@ const Header = ({ user, setOpen, setActiveCart }) => {
           </span>
         </div>
         <div className="endHeader">
+          <span className="center">{CartContext["cart"]?.length}</span>
           <FontAwesomeIcon
             icon={faCartShopping}
             onClick={() => setActiveCart((prev) => !prev)}
           />
+
           {user ? (
             <UserTitle user={user} />
           ) : (

@@ -40,6 +40,7 @@ const SingleProduct = () => {
       originalWidth: "200px",
     };
   });
+  //handle plus and minus product
   function addProduct(product) {
     const testFind = CartContext["cart"].find((p) => {
       return p.id == product.id;
@@ -48,7 +49,10 @@ const SingleProduct = () => {
       const newPr = { ...product, quantity: 1 };
       CartContext.setCart((prev) => [...prev, newPr]);
     } else {
-      testFind.quantity = +testFind.quantity + 1;
+      const newData = CartContext["cart"].map((p) =>
+        p.id === product.id ? { ...p, quantity: p.quantity + 1 } : p
+      );
+      CartContext.setCart(newData);
     }
   }
 
