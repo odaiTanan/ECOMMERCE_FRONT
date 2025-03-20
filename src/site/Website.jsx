@@ -27,6 +27,7 @@ const Website = () => {
   const [activeCart, setActiveCart] = useState(false);
   const context = useContext(categoriesContext);
   const [loading, seLoading] = useState(true);
+  const [regionError, setRegionError] = useState(false);
   const cookie = new Cookie();
   //get user
   useEffect(() => {
@@ -46,12 +47,13 @@ const Website = () => {
         context.setCategories(res.data);
       })
       .catch((err) => {
-        console.log(err);
+        err.status != 401 && setRegionError(true);
       })
       .finally(() => {
         seLoading(false);
       });
   }, []);
+  if (regionError) return <h1>cant serve your region !</h1>;
   const categoriesShow = context.categories
     .map((cat, key) => {
       return (
