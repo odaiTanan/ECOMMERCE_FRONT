@@ -41,7 +41,6 @@ const Website = () => {
   //get categories
   useEffect(() => {
     seLoading(true);
-
     Axios.get(CATEGORIES)
       .then((res) => {
         context.setCategories(res.data);
@@ -57,7 +56,11 @@ const Website = () => {
   const categoriesShow = context.categories
     .map((cat, key) => {
       return (
-        <NavLink className={"center"} to={`/categories/${cat.id}`}>
+        <NavLink
+          onClick={() => setOpen(false)}
+          className={"center"}
+          to={`/categories/${cat.id}`}
+        >
           {CustomSlice(cat.title, 12)}
         </NavLink>
       );

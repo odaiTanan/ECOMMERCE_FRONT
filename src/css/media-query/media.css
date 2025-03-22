@@ -3,7 +3,7 @@
     width: 99%;
   }
   #cart {
-    height: calc(100vh - 146.2px);
+    height: calc(100vh - 146.2px) !important;
   }
   .continer.latest {
     grid-template-columns: repeat(auto-fill, minmax(200px, 275px)) !important;
