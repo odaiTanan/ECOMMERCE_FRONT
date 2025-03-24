@@ -7,7 +7,7 @@ const useCategoriesQuery = ({ setRegionError }) => {
       const res = await Axios.get(CATEGORIES);
       return res.data;
     } catch (err) {
-      !err.status == 401 && setRegionError(true);
+      setRegionError(true);
     }
   }
   return useQuery({
