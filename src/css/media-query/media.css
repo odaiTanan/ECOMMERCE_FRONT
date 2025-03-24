@@ -2,9 +2,11 @@
   .continer {
     width: 99%;
   }
-  #cart {
+  #cart,
+  .full {
     height: calc(100svh - 146.2px) !important;
   }
+
   .continer.latest {
     grid-template-columns: repeat(auto-fill, minmax(200px, 275px)) !important;
   }

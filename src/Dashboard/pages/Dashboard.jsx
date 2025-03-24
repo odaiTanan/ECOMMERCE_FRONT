@@ -1,22 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Header from "../components/Header";
 import SideBar from "../components/SideBar";
 import { Outlet, useNavigate } from "react-router-dom";
-import { Axios } from "../../api/Axios";
-import { USER } from "../../api/api";
+import useUserQuery from "../../tanstckQuery/hooks/useUserQuery";
 const Dashboard = () => {
   //sideBar state
   const [open, setOpen] = useState(false);
-  //user state
-  const [user, setUser] = useState("");
   const nav = useNavigate();
-  useEffect(() => {
-    Axios.get(USER)
-      .then((res) => setUser(res.data))
-      .catch((err) => {
-        nav("/login", { replace: true });
-      });
-  }, []);
+  //get user
+  const { data: user = "" } = useUserQuery();
+
   return (
     <div id="dashboard">
       <Header user={user} />

@@ -10,8 +10,8 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { searchContext } from "../context/SearchContext";
 import { cartContext } from "../context/CartContext";
-
-const Header = ({ user, setOpen, setActiveCart }) => {
+import Skeleton from "react-loading-skeleton";
+const Header = ({ user, setOpen, setActiveCart, userLoading }) => {
   const SearchContext = useContext(searchContext);
   const CartContext = useContext(cartContext);
   return (
@@ -54,12 +54,23 @@ const Header = ({ user, setOpen, setActiveCart }) => {
             onClick={() => setActiveCart((prev) => !prev)}
           />
 
-          {user ? (
-            <UserTitle user={user} />
+          {!userLoading ? (
+            user ? (
+              <UserTitle user={user} />
+            ) : (
+              <Link id="login" className="center" to="login">
+                sign in
+              </Link>
+            )
           ) : (
-            <Link id="login" className="center" to="login">
-              sign in
-            </Link>
+            <Skeleton
+              containerClassName="center"
+              style={{ borderRadius: "50%" }}
+              baseColor="#bbbdbc"
+              highlightColor="#f2f0ef"
+              height={40}
+              width={40}
+            />
           )}
         </div>
       </div>
