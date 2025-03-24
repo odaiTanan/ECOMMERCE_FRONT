@@ -14,19 +14,21 @@ import "../css/skeleton/single-skeleton.css";
 import "../css/pages/payment.css";
 import Cookie from "cookie-universal";
 import { Axios } from "../api/Axios";
-import { CATEGORIES, USER } from "../api/api";
+import { USER } from "../api/api";
 import { useState } from "react";
 import CustomSlice from "../helpers/CustomSlice";
 import Loading from "../components/Loading";
 import { useContext } from "react";
 import { categoriesContext } from "../context/CategoriesContext";
 import Cart from "./Cart";
+import useCategoriesQuery from "../tanstckQuery/hooks/useCategoriesQuery";
+import Skeleton from "react-loading-skeleton";
 const Website = () => {
   const [user, setUser] = useState("");
   const [open, setOpen] = useState(false);
   const [activeCart, setActiveCart] = useState(false);
   const context = useContext(categoriesContext);
-  const [loading, seLoading] = useState(true);
+  const [loading, seLoading] = useState(false);
   const [regionError, setRegionError] = useState(false);
   const cookie = new Cookie();
   //get user
@@ -39,24 +41,17 @@ const Website = () => {
         });
   }, [cookie.get("token")]);
   //get categories
-  useEffect(() => {
-    seLoading(true);
-    Axios.get(CATEGORIES)
-      .then((res) => {
-        context.setCategories(res.data);
-      })
-      .catch((err) => {
-        err.status != 401 && setRegionError(true);
-      })
-      .finally(() => {
-        seLoading(false);
-      });
-  }, []);
-  if (regionError) return <h1>cant serve your region !</h1>;
-  const categoriesShow = context.categories
+  const {
+    data: categories = [],
+    error,
+    isLoading: categoriesLoading,
+  } = useCategoriesQuery();
+  if (error) return error.name + " " + error.message + "  " + error.stack;
+  const categoriesShow = categories
     .map((cat, key) => {
       return (
         <NavLink
+          key={key}
           onClick={() => setOpen(false)}
           className={"center"}
           to={`/categories/${cat.id}`}
@@ -88,12 +83,29 @@ const Website = () => {
             />
             <div style={{ width: "100%", backgroundColor: "white" }}>
               {" "}
-              <div className="continer categories">
-                <div style={{ right: open ? "0" : "-100%" }}>
-                  {categoriesShow}
-                  <NavLink className={"center"} to="categories">
-                    show all
-                  </NavLink>
+              <div className="continer categories ">
+                <div
+                  className="headCategoriescon"
+                  style={{ right: open ? "0" : "-100%" }}
+                >
+                  {categoriesLoading ? (
+                    [...Array(4)].map((_, index) => (
+                      <Skeleton
+                        containerClassName="center catskeleton"
+                        baseColor="#bbbdbc"
+                        highlightColor="#f2f0ef"
+                        height={40}
+                        width={60}
+                      />
+                    ))
+                  ) : (
+                    <>
+                      {categoriesShow}
+                      <NavLink className={"center"} to="categories">
+                        show all
+                      </NavLink>
+                    </>
+                  )}
                 </div>
               </div>
             </div>

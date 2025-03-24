@@ -61,6 +61,15 @@
   width: 100%;
   background-color: var(--g1);
 }
+.headCategoriescon {
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.catskeleton {
+  padding: 10px 0;
+}
 @keyframes goToRight {
   100% {
     right: 5px;
