@@ -37,6 +37,7 @@ const Cart = () => {
           product_ids: ids,
           quantities: quantitiesPayload,
         });
+        localStorage.clear();
         window.location.href = res.data.url;
       } else {
         nav("/login");

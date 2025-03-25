@@ -13,8 +13,9 @@ const GoogleCallback = () => {
     axios
       .get(host + GOOGLE_CALL_BACK + location.search)
       .then((res) => {
+        console.log(res.data);
         cookie.set("token", res.data.access_token);
-        nav("/", { replace: true });
+        window.location.pathname = "/";
       })
       .catch((err) => {
         console.log(err);

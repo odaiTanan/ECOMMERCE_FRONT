@@ -52,7 +52,7 @@ const Register = () => {
       </header>
       <div
         className="continer center"
-        style={{ height: "calc(100vh - 100px)" }}
+        style={{ height: "calc(100vh - 120px)" }}
       >
         {loading && <Loading />}
         <div className="auth-form">

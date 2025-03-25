@@ -16,7 +16,7 @@ const useProductsQuery = ({ isCategory, api, category }) => {
         });
   }
   return useQuery({
-    queryKey: ["products", `${api}`, `${category}`, `${search}`],
+    queryKey: ["products", `${api}`, `${category}`],
     queryFn: handleProducts,
   });
 };

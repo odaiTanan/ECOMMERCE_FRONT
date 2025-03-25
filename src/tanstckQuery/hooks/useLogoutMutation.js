@@ -11,7 +11,7 @@ const useLogoutMutation = () => {
       const res = await Axios.get(LOGOUT);
       const cookie = Cookie();
       cookie.remove("token");
-      nav("/login", { replace: true });
+      window.location.pathname = "/login";
     } catch (err) {
       console.log(err);
     }

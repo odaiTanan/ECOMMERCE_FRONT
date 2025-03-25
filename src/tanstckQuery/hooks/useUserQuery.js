@@ -6,11 +6,13 @@ const useUserQuery = () => {
   async function handleTable() {
     const cookie = new Cookie();
     cookie.get("token");
-    try {
-      const res = await Axios.get(USER);
-      return res.data;
-    } catch (err) {
-      err.status == 401 && cookie.remove("token");
+    if (cookie.get("token")) {
+      try {
+        const res = await Axios.get(USER);
+        return res.data;
+      } catch (err) {
+        err.status == 401 && cookie.remove("token");
+      }
     }
   }
   return useQuery({
